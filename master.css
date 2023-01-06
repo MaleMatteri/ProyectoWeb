@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #9F73AB;
+    color: white;
+    font-size: 30px;
+}
+
+/************************************** BODY *****************************************/
+p{
+    font-size: 20px;
+}
+
+.btn{
+    background-color: #3F3B6C ;
+    border-color: #3F3B6C;
+}
+
+#SaldoFinal{
+    font-weight: bold;
+}
+
+footer{
+    background-color: #9F73AB;
+    text-align: center;
+    color: white;
+}
+
+.explanationText{
+    font-size: 20px;
+    color: grey;
+}
+
+.input-group-text{
+    text-align: center;
+}
+
+.nav-link{
+    /* background-color: #A3C7D6; */
+    color: #3F3B6C;
+    font-size: 20px;
+}
+
+.nav-item{
+    padding: 5px;
+}

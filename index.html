@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="master.css">
+    <script src="master.js"></script>
+    <title>Mi saldo</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>Mi sueldo</h1>
+            <p><em>Ingrese su sueldo bruto y lo calculamos</em></p>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Secciones</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#calculator">Calculadora</a>
+                            <a class="nav-link" href="#info">Mas info</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4">
+                <div>
+                    <img src="Pics/1.png" alt="Finanzas" style="width: 300px;">
+                </div>
+            </div>
+            <div class="col-12 col-md-8" id="home">
+                <h2>Te ayudamos a gestionar tus finanzas</h2>
+                <p class="explanationText">Te ayudamos a cumplir tus metas gestionando tus finanzas. Con nuestro sistema
+                    de calculo, a principio de mes podes saber cuanto saldo tendras disponible para destinar a las
+                    diferentes actividades a lo largo del mes.</p>
+                <p class="explanationText">Conoce cuáles son los impuestos que impactan en tu salario y cuánto es el
+                    porcentaje con un solo click!</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center" id="calculator">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4" style="padding: 5px;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body" style="min-height: 270px">
+                        <h5 class="card-title">Sueldo bruto:</h5>
+                        <p class="card-text">Ingrese su sueldo bruto</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" name="inputSueldo" id="inputSueldo" class="form-control">
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" id="botonCalcular">Calcular</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-12 col-md-4" style="padding: 5px;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body" style="min-height: 270px">
+                        <h5 class="card-title">Descuentos aplicados</h5>
+                        <p class="card-text">A tu sueldo le restamos:</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" style="min-width: 140px;">Jubilacion (11%)</span>
+                            <input type="text" name="inputJubilacion" id="sueldoJubilacion" class="form-control"
+                                disabled>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" style="min-width: 140px;">PAMI (3%)</span>
+                            <input type="text" name="inputPAMI" id="sueldoPAMI" class="form-control" disabled>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" style="min-width: 140px;">Obra Social (3%)</span>
+                            <input type="text" name="inputObraSocial" id="sueldObraSocial" class="form-control"
+                                disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-12 col-md-4" style="padding: 5px;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body" style="min-height: 270px">
+                        <h5 class="card-title">Sueldo final</h5>
+                        <p class="card-text">Con todos los descuentos aplicados, es un total de:</p>
+                        <p class="card-text" id="SaldoFinal">$0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center" id="info">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4">
+                <div>
+                    <img src="Pics/2.png" alt="Finanzas" style="width: 300px;">
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <h2>Conoce los descuentos aplicados</h2>
+                <p class="explanationText"><b>Jubilacion: </b> Ese monto, que se resta todos los meses de tu sueldo
+                    bruto, es lo que aportás al Sistema Integrado Previsional Argentino (SIPA), administrado por
+                    la ANSES, para tener derecho a cobrar en el futuro tus haberes de jubilación.</p>
+                <p class="explanationText"><b>Obra social: </b> Tu empleador paga un porcentaje de tu sueldo como
+                    contribución para que tengas obra social.
+                    Vos pagás un aporte del 3% de tu sueldo.</p>
+                <p class="explanationText"><b>PAMI: </b> Es otro descuento del 3% que se destina al INSSJP
+                    (Instituto Nacional de Seguridad Social para Jubilados y Pensionados- PAMI).</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <br>
+        <h3>Mi sueldo</h3>
+        <p>Te ayudamos a calcular tu sueldo</p>
+        <p>Soporte: misueldo@gmail.com</p>
+        <br>
+    </footer>
+</body>
+
+</html>
